@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // stylelint-disable declaration-no-important
 
 .skippy {
@@ -11,8 +13,8 @@
     position: static !important;
     width: auto !important;
     height: auto !important;
-    padding: $spacer / 2 !important;
-    margin: $spacer / 4 !important;
+    padding: math.div($spacer, 2) !important;
+    margin: math.div($spacer, 4) !important;
     overflow: visible !important;
     clip: auto !important;
     white-space: normal !important;
