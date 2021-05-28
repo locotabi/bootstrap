@@ -39,12 +39,12 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .dropdown-menu#{$infix}-left {
+    .dropdown-menu#{"" + $infix}-left {
       right: auto;
       left: 0;
     }
 
-    .dropdown-menu#{$infix}-right {
+    .dropdown-menu#{"" + $infix}-right {
       right: 0;
       left: auto;
     }

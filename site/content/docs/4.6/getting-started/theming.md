@@ -219,7 +219,7 @@ For example, to generate color swatches from our `$theme-colors` map:
 
 ```scss
 @each $color, $value in $theme-colors {
-  .swatch-#{$color} {
+  .swatch-#{"" + $color} {
     color: color-yiq($value);
   }
 }
@@ -414,7 +414,7 @@ Here are two examples of how we loop over the `$theme-colors` map to generate mo
 ```scss
 // Generate alert modifier classes
 @each $color, $value in $theme-colors {
-  .alert-#{$color} {
+  .alert-#{"" + $color} {
     @include alert-variant(theme-color-level($color, -10), theme-color-level($color, -9), theme-color-level($color, 6));
   }
 }
@@ -434,9 +434,9 @@ These Sass loops aren't limited to color maps, either. You can also generate res
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .text#{$infix}-left   { text-align: left !important; }
-    .text#{$infix}-right  { text-align: right !important; }
-    .text#{$infix}-center { text-align: center !important; }
+    .text#{"" + $infix}-left   { text-align: left !important; }
+    .text#{"" + $infix}-right  { text-align: right !important; }
+    .text#{"" + $infix}-center { text-align: center !important; }
   }
 }
 ```

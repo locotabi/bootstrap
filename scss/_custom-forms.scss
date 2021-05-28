@@ -332,7 +332,7 @@
   }
 
   @each $lang, $value in $custom-file-text {
-    &:lang(#{$lang}) ~ .custom-file-label::after {
+    &:lang(#{"" + $lang}) ~ .custom-file-label::after {
       content: $value;
     }
   }

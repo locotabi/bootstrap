@@ -151,21 +151,21 @@
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($next, $grid-breakpoints);
 
-    &#{$infix} {
+    &#{"" + $infix} {
       @include media-breakpoint-down($breakpoint) {
-        %container-navbar-expand-#{$breakpoint} {
+        %container-navbar-expand-#{"" + $breakpoint} {
           padding-right: 0;
           padding-left: 0;
         }
 
         > .container,
         > .container-fluid {
-          @extend %container-navbar-expand-#{$breakpoint};
+          @extend %container-navbar-expand-#{"" + $breakpoint};
         }
 
         @each $size, $container-max-width in $container-max-widths {
           > .container#{breakpoint-infix($size, $container-max-widths)} {
-            @extend %container-navbar-expand-#{$breakpoint};
+            @extend %container-navbar-expand-#{"" + $breakpoint};
           }
         }
       }
@@ -188,18 +188,18 @@
         }
 
         // For nesting containers, have to redeclare for alignment purposes
-        %container-nesting-#{$breakpoint} {
+        %container-nesting-#{"" + $breakpoint} {
           flex-wrap: nowrap;
         }
 
         > .container,
         > .container-fluid {
-          @extend %container-nesting-#{$breakpoint};
+          @extend %container-nesting-#{"" + $breakpoint};
         }
 
         @each $size, $container-max-width in $container-max-widths {
           > .container#{breakpoint-infix($size, $container-max-widths)} {
-            @extend %container-nesting-#{$breakpoint};
+            @extend %container-nesting-#{"" + $breakpoint};
           }
         }
 

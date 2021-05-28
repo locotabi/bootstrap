@@ -3,11 +3,11 @@
 // Typography
 
 @mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
-  #{$parent} {
+  #{"" + $parent} {
     color: $color !important;
   }
   @if $emphasized-link-hover-darken-percentage != 0 {
-    a#{$parent} {
+    a#{"" + $parent} {
       @include hover-focus() {
         color: darken($color, $emphasized-link-hover-darken-percentage) !important;
       }
