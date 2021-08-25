@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "sass:math";
 
 // Embedded icons from Open Iconic.
@@ -106,7 +107,7 @@
     width: $custom-control-indicator-size;
     height: $custom-control-indicator-size;
     content: "";
-    background: math.div(50%, $custom-control-indicator-bg-size) no-repeat;
+    background: list.slash(50%, $custom-control-indicator-bg-size) no-repeat;
   }
 }
 
